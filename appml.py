@@ -1,7 +1,7 @@
 #Rumour ML Project Start
 
 import re
-from sklearn.naive_bayes import MultinomialNB,GaussianNB
+from sklearn.naive_bayes import GaussianNB
 import numpy as np
 import streamlit as st
 from PIL import Image
