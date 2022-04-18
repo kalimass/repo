@@ -5,3 +5,4 @@ Pillow<=9.0.1
 scikit_learn<=1.0.2
 streamlit<=1.6.0
 tensorflow<=2.8.0
+click<=8.0.4
