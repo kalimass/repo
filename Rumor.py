@@ -4,22 +4,23 @@ import streamlit as st
 from PIL import Image
 st.write("""DETECTION OF RUMOUR OR NOT RUMOUR IN DEEP LEARNING TECHNIQUES""")#This Shows the Data IN Page. st used to show in web app
          
-image=Image.open('I:/AI.jpg')
-st.image(image,caption='ML',use_column_width=True,)
+#image=Image.open('I:/AI.jpg')
+#st.image(image,caption='ML',use_column_width=True,)
 
-
+import re
+import os
 import pandas as pd
 import numpy as np
-from keras.preprocessing import sequence
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from keras.models import Sequential
 from keras.layers import Dense, Embedding, LSTM
 from keras.preprocessing.sequence import pad_sequences
 from keras.preprocessing.text import Tokenizer
+import os
 import pandas as pd
 
-data=pd.read_csv('I:/Gaja.csv')
+data=pd.read_csv('https://raw.githubusercontent.com/kalimass/Dataser/main/Gaja.csv')
 
 data=data.dropna()
 
@@ -57,8 +58,9 @@ model.summary()
 model_fit=model.fit(x_train,y_train,epochs=1,validation_data=(x_test,y_test),batch_size=32)
 
 
-
+from textblob import TextBlob
 import streamlit as st  
+from textblob import TextBlob
 import pandas as pd
 import altair as alt
 #from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
